@@ -38,11 +38,9 @@ function changeClass (remove, add) {
 function getStorageTheme() {
     let savedTheme = localStorage.getItem('check-position');
 
-    if (savedTheme) {
-        if (savedTheme === 'true') {
-            inputEl.checked = true;
-            bodyEl.classList.add(Theme.DARK);
-        }
+    if (savedTheme && savedTheme === 'true') {
+        inputEl.checked = true;
+        bodyEl.classList.add(Theme.DARK);
     }
 };
 
